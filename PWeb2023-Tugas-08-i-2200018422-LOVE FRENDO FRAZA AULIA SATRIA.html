@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Biodata</title>
+	<style>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		input {
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+
+	<SCRIPT LANGUAGE = "JavaScript">
+<!--
+function cekNama(form){
+if (form.elements[0].value==""){
+alert("Nama harus dimasukkan");
+form.nama.focus();
+form.nama.select();
+return(false);
+}
+alert("Terima kasih, "+
+form.elements[0].value);
+return(true);
+}
+//-->
+</SCRIPT>
+<FORM NAME = "formku">
+<PRE>
+Nama : <INPUT TYPE = "TEXT" NAME =
+"nama"><BR>
+<INPUT TYPE = "BUTTON" VALUE =
+"Kirim"
+onClick =
+"cekNama(this.form)"><BR
+	
+	<h1>Form Biodata</h1>
+	<form>
+		<label for="nama">Nama:</label>
+		<input type="text" id="nama" name="nama" required>
+
+		<label for="umur">Umur:</label>
+		<input type="number" id="umur" name="umur" required>
+
+		<label for="alamat">Alamat:</label>
+		<textarea id="alamat" name="alamat" rows="5" required></textarea>
+
+		<label for="pekerjaan">Pekerjaan:</label>
+		<input type="text" id="pekerjaan" name="pekerjaan" required>
+
+		<button type="submit" onclick="submitForm()">Submit</button>
+	</form>
+
+	<script>
+		function submitForm() {
+			const nama = document.getElementById("nama").value;
+			const umur = document.getElementById("umur").value;
+			const alamat = document.getElementById("alamat").value;
+			const pekerjaan = document.getElementById("pekerjaan").value;
+
+			alert("Biodata berhasil disimpan!\n\nNama: " + nama + "\nUmur: " + umur + "\nAlamat: " + alamat + "\nPekerjaan: " + pekerjaan);
+			document.querySelector("form").reset();
+		}
+	</script>
+</body>
+</html>
